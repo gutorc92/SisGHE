@@ -16,8 +16,8 @@ import javax.swing.JOptionPane;
  */
 public class InCadastroAluno extends javax.swing.JFrame {
 
-    ArrayList<DisciplinaCursada> disciplinasCursadas = new ArrayList<DisciplinaCursada>();
-    static ArrayList<DisciplinaCursada> disciplinas = DeserializaDisciplinas.deserializarDisciplinas();
+    private ArrayList<DisciplinaCursada> listDisciplinasCursadas = new ArrayList<DisciplinaCursada>();
+    private static ArrayList<DisciplinaCursada> listTodasDisciplinas = DeserializaDisciplinas.deserializarDisciplinas();
 
     /**
      * Creates new form CadastroAluno
@@ -589,22 +589,22 @@ public class InCadastroAluno extends javax.swing.JFrame {
         controle.CadastraAluno(nome, matricula, curso, semestre);
         controle.chamaSerializar();
         
-        verifica(Acustica_e_vibracoes_veiculares);
-        verifica(Analise_de_sinais_e_design_de_circuitos);
-        verifica(Calculo1);
-        verifica(Calculo2);
-        verifica(Calculo3);
-        verifica(Circuitos_eletronicos1);
-        verifica(Circuito_Eletronico2);
-        verifica(circuitos_eletronicos3);
-        verifica(Comunicacoes_digitais_para_engenharia);
-        verifica(Dinamica_de_veiculos);
+        actionCheckBox(Acustica_e_vibracoes_veiculares);
+        actionCheckBox(Analise_de_sinais_e_design_de_circuitos);
+        actionCheckBox(Calculo1);
+        actionCheckBox(Calculo2);
+        actionCheckBox(Calculo3);
+        actionCheckBox(Circuitos_eletronicos1);
+        actionCheckBox(Circuito_Eletronico2);
+        actionCheckBox(circuitos_eletronicos3);
+        actionCheckBox(Comunicacoes_digitais_para_engenharia);
+        actionCheckBox(Dinamica_de_veiculos);
 
         //Chamar método que gera XML
-        XmlDisciplinasCursadas.gerarXml(disciplinasCursadas);
+        XmlDisciplinasCursadas.gerarXml(listDisciplinasCursadas);
 
         //Visualizar dados da array, apenas para teste
-        JOptionPane.showMessageDialog(null, "\nNome: " + nome + "\nMatrícula: " + matricula + "\nCurso: " + curso + "\nSemestre: " + semestre + "\n" + disciplinasCursadas);
+        JOptionPane.showMessageDialog(null, "\nNome: " + nome + "\nMatrícula: " + matricula + "\nCurso: " + curso + "\nSemestre: " + semestre + "\n" + listDisciplinasCursadas);
         this.dispose();
     }//GEN-LAST:event_jBsalvarActionPerformed
 
@@ -623,66 +623,53 @@ public class InCadastroAluno extends javax.swing.JFrame {
     private void Analise_de_sinais_e_design_de_circuitosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Analise_de_sinais_e_design_de_circuitosActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Analise_de_sinais_e_design_de_circuitosActionPerformed
-
-    public void verifica(JCheckBox cb) {
-
-        DisciplinaCursada dp = new DisciplinaCursada();
-        
-        if (cb.isSelected()) {
-            for (DisciplinaCursada dc : disciplinas) {
-                if (dc.getNome().equalsIgnoreCase(cb.getText())) {
-                    dp = new DisciplinaCursada(cb.getText(), dc.getCodigo(), dc.getCod_preReq());
+    
+    
+    /**
+     * Encontrar disciplina na lista
+     * @param nmDisciplina nome da disciplina desejada
+     * @return objeto DisciplinaCursada
+     */
+    private DisciplinaCursada getDisciplina(String nmDisciplina){
+        DisciplinaCursada obDisciplinaCursada = null;
+        for (DisciplinaCursada obProvDiscplinaCursada  : listTodasDisciplinas) {
+                if (obProvDiscplinaCursada.getNome().equalsIgnoreCase(nmDisciplina)) {
+                    obDisciplinaCursada = obProvDiscplinaCursada;
                 }
-            }
-            disciplinasCursadas.add(dp);
+        }
+        if(obDisciplinaCursada == null){
+            throw new NullPointerException();
+        }
+        return obDisciplinaCursada;
+    }
+    
+    private void addDisciplina(String nmDisciplina){
+        try{
+            listDisciplinasCursadas.add(this.getDisciplina(nmDisciplina));
+        }catch(NullPointerException ex){
+            //nao faz nada
+        }
+    }
+    
+    private void rmDisciplina(String nmDisciplina){
+        try{
+           listDisciplinasCursadas.remove(this.getDisciplina(nmDisciplina));
+       }catch(NullPointerException ex){
+           //nao faz nada
+       }
+        
+    }
+    
+    public void actionCheckBox(JCheckBox cb) {
+        if (cb.isSelected()) {
+            this.addDisciplina(cb.getText());
         }
         if (!cb.isSelected()) {
-
-            for (Iterator<DisciplinaCursada> it = disciplinasCursadas.iterator(); it.hasNext();) {
-                DisciplinaCursada n = it.next();
-                if (cb.getText().contains(n.getNome())) {
-                    it.remove();
-                }
-            }
+            this.rmDisciplina(cb.getText());
         }
     }
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(InCadastroAluno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(InCadastroAluno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(InCadastroAluno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(InCadastroAluno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        InCadastroAluno cadastro = new InCadastroAluno();
-        cadastro.setVisible(true);
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new InCadastroAluno().setVisible(true);
-            }
-        });
-    }
+   
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox Acustica_e_vibracoes_veiculares;
     private javax.swing.JCheckBox Analise_de_sinais_e_design_de_circuitos;

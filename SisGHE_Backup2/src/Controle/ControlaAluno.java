@@ -25,20 +25,21 @@ public class ControlaAluno {
     private ControlaAluno cadastro;
     private InAlteraAluno inAltera;
     private InAluno inAluno;
+
     public ControlaAluno() {
         this.aluno = new Aluno();
 
     }
 
     public void CadastraAluno(String nome, String matricula, String curso, String semestre) {
-       
+
         this.aluno.setNome(nome);
         this.aluno.setMatricula(matricula);
         this.aluno.setCurso(curso);
         this.aluno.setSemestre(semestre);
         alunos.add(this.aluno);
-      
-       }
+
+    }
 
     public void AlterarAluno(String nome, String matricula, String curso, String semestre) throws IllegalArgumentException {
         this.aluno.setNome(nome);
@@ -56,8 +57,6 @@ public class ControlaAluno {
         SerializaAluno.SerializarAlterar();
 
     }
-
-  
 
     public void setaAluno() {
 
@@ -82,43 +81,42 @@ public class ControlaAluno {
 
     }
 
-public void verificaCadastro(){
-    DeserializaAluno.VerificaCadastro();
-   }
-
-/*Método responsavel por verificar a Existencia do arquivo do Cadastro. Se o arquivo existir
- * habilitamos os botões de alterar e excluir, caso não exista, habilitamos apenas o botão de cadastro.
- */
-public void habilitaButtonAluno(){
-     InAluno interfaceAluno = new InAluno();
-     interfaceAluno.setVisible(true);
-    if (DeserializaAluno.VerificaCadastro()){
-       interfaceAluno.jBCadastrar.setEnabled(true);
-       interfaceAluno.jBAlterar.setEnabled(false);
-       interfaceAluno.jBExcluir.setEnabled(false);
-    } 
- 
-    else{
-    interfaceAluno.jBCadastrar.setEnabled(false);
-    interfaceAluno.jBAlterar.setEnabled(true);
-    interfaceAluno.jBExcluir.setEnabled(true);
+    public void verificaCadastro() {
+        DeserializaAluno.VerificaCadastro();
     }
-  
- 
+    /**
+     * fjslfkj
+     */
+    public void habilitaButtonAluno() {
+        InAluno interfaceAluno = new InAluno();
+        interfaceAluno.setVisible(true);
+        if (DeserializaAluno.VerificaCadastro()) {
+            interfaceAluno.jBCadastrar.setEnabled(true);
+            interfaceAluno.jBAlterar.setEnabled(false);
+            interfaceAluno.jBExcluir.setEnabled(false);
+        } else {
+            interfaceAluno.jBCadastrar.setEnabled(false);
+            interfaceAluno.jBAlterar.setEnabled(true);
+            interfaceAluno.jBExcluir.setEnabled(true);
+        }
 
-    
-}
+
+
+
+    }
 
 //FELIPE>>>
-
-    public static void chamaExcluir(){
+    public static void chamaExcluir() {
         int aux;
-        
+
         aux = DeserializaAluno.excluiXmlAluno();
-        
+
         aux += XmlDisciplinasCursadas.excluiXmlCadastro();
-        
-        if(aux<=0) JOptionPane.showMessageDialog(null, "Nao foi possivel excluir o arquivo");
-        else JOptionPane.showMessageDialog(null, "Aluno e seus dados excluidos com sucesso");
+
+        if (aux <= 0) {
+            JOptionPane.showMessageDialog(null, "Nao foi possivel excluir o arquivo");
+        } else {
+            JOptionPane.showMessageDialog(null, "Aluno e seus dados excluidos com sucesso");
+        }
     }
 }
