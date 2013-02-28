@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<disciplina>
+	<id  codigoid100 = "100" > 
+		<nome>Acustica e Vibracoes Veiculares</nome>
+		<codigo>999999</codigo>
+		<pre_req>888888</pre_req>
+		<turmas>
+			<codigoid110>
+				<turma>A</turma>
+				<professor>Professor</professor>
+				<dia1>Segunda</dia1><hora1>08h - 09h50</hora1>
+				<dia2>Quarta</dia2><hora2>08h - 09h50</hora2>
+				<dia3>Sexta</dia3><hora3>08h - 09h50</hora3>
+			</codigoid110>
+			
+			<codigoid2>
+				<turma>B</turma>
+				<professor>Professor2</professor>
+				<dia1>Segunda</dia1><hora1>10h - 11h50</hora1>
+				<dia2>Quarta</dia2><hora2>10h - 11h50</hora2>
+				<dia3>Sexta</dia3><hora3>10h - 11h50</hora3>
+			</codigoid2>
+		</turmas>
+	</id>
+	<id  codigoid100 = "100" > 
+		<nome>Analise de Sinais e Design de circuitos </nome>
+		<codigo>999999</codigo>
+		<pre_req>888888</pre_req>
+		<turmas>
+			<codigoid110>
+				<turma>A</turma>
+				<professor>Professor</professor>
+				<dia1>Segunda</dia1><hora1>08h - 09h50</hora1>
+				<dia2>Quarta</dia2><hora2>08h - 09h50</hora2>
+				<dia3>Sexta</dia3><hora3>08h - 09h50</hora3>
+			</codigoid110>
+			
+			<codigoid2>
+				<turma>B</turma>
+				<professor>Professor2</professor>
+				<dia1>Segunda</dia1><hora1>10h - 11h50</hora1>
+				<dia2>Quarta</dia2><hora2>10h - 11h50</hora2>
+				<dia3>Sexta</dia3><hora3>10h - 11h50</hora3>
+			</codigoid2>
+		</turmas>
+	</id>
+	<id  codigoid100 = "100" > 
+		<nome>Calculo 1</nome>
+		<codigo>113034</codigo>
+		<pre_req>0</pre_req>
+		<turmas>
+			<codigoid110>
+				<turma>A</turma>
+				<professor>Ricardo Ramos Fragelli</professor>
+				<dia1>Segunda</dia1><hora1>08h - 09h50</hora1>
+				<dia2>Quarta</dia2><hora2>08h - 09h50</hora2>
+				<dia3>Sexta</dia3><hora3>08h - 09h50</hora3>
+			</codigoid110>
+			
+			<codigoid2>
+				<turma>B</turma>
+				<professor>Ricardo Ramos Fragelli</professor>
+				<dia1>Segunda</dia1><hora1>10h - 11h50</hora1>
+				<dia2>Quarta</dia2><hora2>10h - 11h50</hora2>
+				<dia3>Sexta</dia3><hora3>10h - 11h50</hora3>
+			</codigoid2>
+		</turmas>
+	</id>
+	
+	<id  codigoid100 = "100" > 
+		<nome>Calculo 2</nome>
+		<codigo>113042</codigo>
+		<pre_req>113034</pre_req>
+		<turmas>
+			<codigoid110>
+				<turma>A</turma>
+				<professor>Tatiane</professor>
+				<dia1>Segunda</dia1><hora1>08h - 09h50</hora1>
+				<dia2>Quarta</dia2><hora2>08h - 09h50</hora2>
+				<dia3>Sexta</dia3><hora3>08h - 09h50</hora3>
+			</codigoid110>
+			
+			<codigoid2>
+				<turma>B</turma>
+				<professor>Tatiane</professor>
+				<dia1>Segunda</dia1><hora1>10h - 11h50</hora1>
+				<dia2>Quarta</dia2><hora2>10h - 11h50</hora2>
+				<dia3>Sexta</dia3><hora3>10h - 11h50</hora3>
+			</codigoid2>
+		</turmas>
+	</id>
+
+	<id  codigoid100 = "100" > 
+		<nome>Calculo 3</nome>
+		<codigo>113051</codigo>
+		<pre_req>113042</pre_req>
+		<turmas>
+			<codigoid110>
+				<turma>A</turma>
+				<professor>Vinicius</professor>
+				<dia1>Segunda</dia1><hora1>08h - 09h50</hora1>
+				<dia2>Quarta</dia2><hora2>08h - 09h50</hora2>
+				<dia3>Sexta</dia3><hora3>08h - 09h50</hora3>
+			</codigoid110>
+			
+			<codigoid2>
+				<turma>B</turma>
+				<professor>Vinicius</professor>
+				<dia1>Segunda</dia1><hora1>10h - 11h50</hora1>
+				<dia2>Quarta</dia2><hora2>10h - 11h50</hora2>
+				<dia3>Sexta</dia3><hora3>10h - 11h50</hora3>
+			</codigoid2>
+		</turmas>
+	</id>
+	<id  codigoid100 = "100" > 
+		<nome>Circuitos Eletronicos 1</nome>
+		<codigo>999999</codigo>
+		<pre_req>888888</pre_req>
+		<turmas>
+			<codigoid110>
+				<turma>A</turma>
+				<professor>Vinicius</professor>
+				<dia1>Segunda</dia1><hora1>08h - 09h50</hora1>
+				<dia2>Quarta</dia2><hora2>08h - 09h50</hora2>
+				<dia3>Sexta</dia3><hora3>08h - 09h50</hora3>
+			</codigoid110>
+			
+			<codigoid2>
+				<turma>B</turma>
+				<professor>Vinicius</professor>
+				<dia1>Segunda</dia1><hora1>10h - 11h50</hora1>
+				<dia2>Quarta</dia2><hora2>10h - 11h50</hora2>
+				<dia3>Sexta</dia3><hora3>10h - 11h50</hora3>
+			</codigoid2>
+		</turmas>
+	</id>
+	<id  codigoid100 = "100" > 
+		<nome>Circuitos Eletronicos 2</nome>
+		<codigo>999999</codigo>
+		<pre_req>888888</pre_req>
+		<turmas>
+			<codigoid110>
+				<turma>A</turma>
+				<professor>Vinicius</professor>
+				<dia1>Segunda</dia1><hora1>08h - 09h50</hora1>
+				<dia2>Quarta</dia2><hora2>08h - 09h50</hora2>
+				<dia3>Sexta</dia3><hora3>08h - 09h50</hora3>
+			</codigoid110>
+			
+			<codigoid2>
+				<turma>B</turma>
+				<professor>Vinicius</professor>
+				<dia1>Segunda</dia1><hora1>10h - 11h50</hora1>
+				<dia2>Quarta</dia2><hora2>10h - 11h50</hora2>
+				<dia3>Sexta</dia3><hora3>10h - 11h50</hora3>
+			</codigoid2>
+		</turmas>
+	</id>
+	<id  codigoid100 = "100" > 
+		<nome>Circuitos Eletronicos 3</nome>
+		<codigo>999999</codigo>
+		<pre_req>888888</pre_req>
+		<turmas>
+			<codigoid110>
+				<turma>A</turma>
+				<professor>Vinicius</professor>
+				<dia1>Segunda</dia1><hora1>08h - 09h50</hora1>
+				<dia2>Quarta</dia2><hora2>08h - 09h50</hora2>
+				<dia3>Sexta</dia3><hora3>08h - 09h50</hora3>
+			</codigoid110>
+			
+			<codigoid2>
+				<turma>B</turma>
+				<professor>Vinicius</professor>
+				<dia1>Segunda</dia1><hora1>10h - 11h50</hora1>
+				<dia2>Quarta</dia2><hora2>10h - 11h50</hora2>
+				<dia3>Sexta</dia3><hora3>10h - 11h50</hora3>
+			</codigoid2>
+		</turmas>
+	</id>
+	<id  codigoid100 = "100" > 
+		<nome>Comunicacoes Digitais Para Engenharia</nome>
+		<codigo>999999</codigo>
+		<pre_req>888888</pre_req>
+		<turmas>
+			<codigoid110>
+				<turma>A</turma>
+				<professor>Vinicius</professor>
+				<dia1>Segunda</dia1><hora1>08h - 09h50</hora1>
+				<dia2>Quarta</dia2><hora2>08h - 09h50</hora2>
+				<dia3>Sexta</dia3><hora3>08h - 09h50</hora3>
+			</codigoid110>
+			
+			<codigoid2>
+				<turma>B</turma>
+				<professor>Vinicius</professor>
+				<dia1>Segunda</dia1><hora1>10h - 11h50</hora1>
+				<dia2>Quarta</dia2><hora2>10h - 11h50</hora2>
+				<dia3>Sexta</dia3><hora3>10h - 11h50</hora3>
+			</codigoid2>
+		</turmas>
+	</id>
+	<id  codigoid100 = "100" > 
+		<nome>Dinamica De Veiculos</nome>
+		<codigo>999999</codigo>
+		<pre_req>888888</pre_req>
+		<turmas>
+			<codigoid110>
+				<turma>A</turma>
+				<professor>Vinicius</professor>
+				<dia1>Segunda</dia1><hora1>08h - 09h50</hora1>
+				<dia2>Quarta</dia2><hora2>08h - 09h50</hora2>
+				<dia3>Sexta</dia3><hora3>08h - 09h50</hora3>
+			</codigoid110>
+			
+			<codigoid2>
+				<turma>B</turma>
+				<professor>Vinicius</professor>
+				<dia1>Segunda</dia1><hora1>10h - 11h50</hora1>
+				<dia2>Quarta</dia2><hora2>10h - 11h50</hora2>
+				<dia3>Sexta</dia3><hora3>10h - 11h50</hora3>
+			</codigoid2>
+		</turmas>
+	</id>
+</disciplina>
+

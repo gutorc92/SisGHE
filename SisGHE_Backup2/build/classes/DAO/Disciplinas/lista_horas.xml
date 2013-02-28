@@ -1,0 +1,10 @@
+<lista_horas>
+	<hora><codigo>0</codigo>	<nome>08h - 09h50</nome></hora>
+	<hora><codigo>1</codigo>	<nome>10h - 11h50</nome></hora>
+	<hora><codigo>2</codigo>	<nome>12h - 13h50</nome></hora>
+	<hora><codigo>3</codigo>	<nome>14h - 15h50</nome></hora>
+	<hora><codigo>4</codigo>	<nome>16h - 17h50</nome></hora>
+	<hora><codigo>5</codigo>	<nome>18h - 19h50</nome></hora>
+	<hora><codigo>6</codigo>	<nome>20h - 21h50</nome></hora>
+	<hora><codigo>7</codigo>	<nome>22h - 22h50</nome></hora>
+</lista_horas>

@@ -1,0 +1,2184 @@
+<list>
+  <disciplina>
+    <nome>Acustica e Vibracoes Veiculares</nome>
+    <codigo>208582</codigo>
+    <pre__req>113301 e 201642</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>14h - 15h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>14h - 15h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Analise de Sinais e Design de Circuitos</nome>
+    <codigo>208248</codigo>
+    <pre__req>203785</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>16h - 17h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>16h - 17h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Calculo 1</nome>
+    <codigo>113034</codigo>
+    <pre__req>0</pre__req>
+    <turmas>
+      <turma>
+        <nome>AA</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Segunda</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>BB</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Segunda</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>CC</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Segunda</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Calculo 2</nome>
+    <codigo>113042</codigo>
+    <pre__req>113034</pre__req>
+    <turmas>
+      <turma>
+        <nome>AA</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Segunda</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>BB</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Segunda</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>CC</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Segunda</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Calculo 3</nome>
+    <codigo>113051</codigo>
+    <pre__req>113042</pre__req>
+    <turmas>
+      <turma>
+        <nome>AA</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Segunda</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>BB</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Segunda</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Circuitos Eletronicos 1</nome>
+    <codigo>203785</codigo>
+    <pre__req>113301</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>14h - 15h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>B</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>16h - 17h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>C</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>16h - 17h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>D</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>18h - 19h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Circuitos Eletronicos 2</nome>
+    <codigo>206156</codigo>
+    <pre__req>203785</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>14h - 15h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>16h - 17h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>16h - 17h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>B</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>16h - 17h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>14h - 15h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>16h - 17h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Circuitos Eletronicos 3</nome>
+    <codigo>208221</codigo>
+    <pre__req>206156</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>16h - 17h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Comunicacoes Digitais de Comunicacao</nome>
+    <codigo>206229</codigo>
+    <pre__req>203815</pre__req>
+    <turmas>
+      <turma>
+        <nome>Z</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Domingo</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>22h - 22h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Dinamica de Veiculos</nome>
+    <codigo>206288</codigo>
+    <pre__req>113301</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Dinamica Multicorpos Veicular</nome>
+    <codigo>208647</codigo>
+    <pre__req>203742 ou 206288 ou 168793</pre__req>
+    <turmas>
+      <turma>
+        <nome>Z</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Domingo</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>22h - 22h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Eletricidade Aplicada</nome>
+    <codigo>201634</codigo>
+    <pre__req>193682</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Segunda</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>16h - 17h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>B</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Segunda</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Segunda</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>C</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Segunda</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>D</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Segunda</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>18h - 19h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>E</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Segunda</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>16h - 17h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Eletronica Veicular</nome>
+    <codigo>206237</codigo>
+    <pre__req>0</pre__req>
+    <turmas>
+      <turma>
+        <nome>AA</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Equacoes Diferenciais</nome>
+    <codigo>113301</codigo>
+    <pre__req>113042</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Estruturas de Dados e Algoritmos</nome>
+    <codigo>193704</codigo>
+    <pre__req>113913</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Fisica 1</nome>
+    <codigo>118001</codigo>
+    <pre__req>0</pre__req>
+    <turmas>
+      <turma>
+        <nome>O</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Segunda</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>P</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>Q</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Segunda</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Fundamentos da Teoria Eletromagnetica</nome>
+    <codigo>193682</codigo>
+    <pre__req>118001 e 113051</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>B</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Segunda</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Fundamentos de Arquitetura de Computadores</nome>
+    <codigo>193674</codigo>
+    <pre__req>167983</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Fundamentos de Compiladores</nome>
+    <codigo>101095</codigo>
+    <pre__req>193704</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Segunda</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Segunda</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Fundamentos de Redes de Computadores</nome>
+    <codigo>203912</codigo>
+    <pre__req>193674</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Fundamentos de Sistemas Distribuidos</nome>
+    <codigo>206610</codigo>
+    <pre__req>195341 e 201286</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Fundamentos de Sistemas Operacionais</nome>
+    <codigo>201286</codigo>
+    <pre__req>0</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Instrumentacao Eletronica</nome>
+    <codigo>206164</codigo>
+    <pre__req>203785 ou 206237</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Segunda</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Segunda</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>16h - 17h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>18h - 19h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Introducao a Algebra Linear</nome>
+    <codigo>113093</codigo>
+    <pre__req>0</pre__req>
+    <turmas>
+      <turma>
+        <nome>AA</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>BB</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>14h - 15h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>14h - 15h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>CC</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Introducao a Ciencia da Computacao</nome>
+    <codigo>113913</codigo>
+    <pre__req>0</pre__req>
+    <turmas>
+      <turma>
+        <nome>AA</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>14h - 15h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>14h - 15h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>BB</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>16h - 17h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>16h - 17h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>CC</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>DD</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>EE</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>FF</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>GG</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>16h - 17h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>16h - 17h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Introducao aos Jogos Eletronicos</nome>
+    <codigo>208493</codigo>
+    <pre__req>195341 e 193704</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Metodos Matematicos para Engenharia</nome>
+    <codigo>201642</codigo>
+    <pre__req>113051 e 113301</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Metodos Numericos para Engenharia</nome>
+    <codigo>195413</codigo>
+    <pre__req>113042</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>B</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>14h - 15h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>14h - 15h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Microprocessadores e Microcontroladores</nome>
+    <codigo>201383</codigo>
+    <pre__req>167991 ou 193674</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>18h - 19h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>18h - 19h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Orientacao a Objetos</nome>
+    <codigo>195341</codigo>
+    <pre__req>113913</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>B</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Principios de Comunicacao</nome>
+    <codigo>203815</codigo>
+    <pre__req>201642</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Processamento de Sinais</nome>
+    <codigo>206172</codigo>
+    <pre__req>201642</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Projeto com Circuitos Reconfiguraveis</nome>
+    <codigo>203807</codigo>
+    <pre__req>201383</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Projeto de Circuitos Eletronicos Integrados 1</nome>
+    <codigo>206148</codigo>
+    <pre__req>203785 ou 167053</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Projeto de Circuitos Eletronicos Integrados 2</nome>
+    <codigo>209007</codigo>
+    <pre__req>206148</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Projeto de Microprocessadores</nome>
+    <codigo>203831</codigo>
+    <pre__req>167991</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>14h - 15h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>14h - 15h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Sensores e Transdutores</nome>
+    <codigo>206300</codigo>
+    <pre__req>0</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Quarta</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Sexta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Sistemas de Controle</nome>
+    <codigo>203793</codigo>
+    <pre__req>201642</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Sistemas Digitais 1</nome>
+    <codigo>167983</codigo>
+    <pre__req>113093</pre__req>
+    <turmas>
+      <turma>
+        <nome>BB</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>14h - 15h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>14h - 15h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>CC</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>14h - 15h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>14h - 15h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>DD</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>14h - 15h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>EE</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>18h - 19h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>FF</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>08h - 09h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>16h - 17h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>GG</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Segunda</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>16h - 17h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>14h - 15h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>14h - 15h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Sistemas Digitais 2</nome>
+    <codigo>167991</codigo>
+    <pre__req>167983 ou 116351</pre__req>
+    <turmas>
+      <turma>
+        <nome>AA</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>14h - 15h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+        </horas>
+      </turma>
+      <turma>
+        <nome>BB</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+          <dia>
+            <id__dia>2</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>10h - 11h50</nome>
+          </hora>
+          <hora>
+            <id__hora>2</id__hora>
+            <nome>14h - 15h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+  <disciplina>
+    <nome>Sistemas Embarcados</nome>
+    <codigo>206181</codigo>
+    <pre__req>201383 ou 201286</pre__req>
+    <turmas>
+      <turma>
+        <nome>A</nome>
+        <dias>
+          <dia>
+            <id__dia>0</id__dia>
+            <nome>Terca</nome>
+          </dia>
+          <dia>
+            <id__dia>1</id__dia>
+            <nome>Quinta</nome>
+          </dia>
+        </dias>
+        <horas>
+          <hora>
+            <id__hora>0</id__hora>
+            <nome>16h - 17h50</nome>
+          </hora>
+          <hora>
+            <id__hora>1</id__hora>
+            <nome>16h - 17h50</nome>
+          </hora>
+        </horas>
+      </turma>
+    </turmas>
+  </disciplina>
+</list>
