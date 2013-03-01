@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import Apresentacao.*;
 import DAO.DeserializaAluno;
 import DAO.XmlDisciplinasCursadas;
+import Modelo.DisciplinaCursada;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
@@ -16,17 +17,17 @@ import javax.swing.JOptionPane;
  *
  * @author david
  */
-public class ControlaAluno {
+public class ControleAluno {
 
     public static List<Aluno> alunos = new ArrayList<Aluno>();
     public static List<Aluno> alteraAluno = new ArrayList<Aluno>();
     private SerializaAluno serializaAluno;
     private Aluno aluno;
-    private ControlaAluno cadastro;
+    private ControleAluno cadastro;
     private InAlteraAluno inAltera;
     private InAluno inAluno;
 
-    public ControlaAluno() {
+    public ControleAluno() {
         this.aluno = new Aluno();
 
     }
@@ -38,6 +39,18 @@ public class ControlaAluno {
         this.aluno.setCurso(curso);
         this.aluno.setSemestre(semestre);
         alunos.add(this.aluno);
+
+    }
+    
+    public void CadastraAluno(String nome, String matricula, String curso, String semestre, ArrayList<DisciplinaCursada> listDisciplinas) {
+
+        this.aluno.setNome(nome);
+        this.aluno.setMatricula(matricula);
+        this.aluno.setCurso(curso);
+        this.aluno.setSemestre(semestre);
+        alunos.add(this.aluno);
+        this.chamaSerializar();
+        XmlDisciplinasCursadas.gerarXml(listDisciplinas);
 
     }
 

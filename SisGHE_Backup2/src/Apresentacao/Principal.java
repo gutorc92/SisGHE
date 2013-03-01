@@ -1,6 +1,6 @@
 package Apresentacao;
 
-import Controle.ControlaAluno;
+import Controle.ControleAluno;
 import Controle.ControlePdf;
 import DAO.DeserializaAluno;
 
@@ -187,7 +187,7 @@ public class Principal extends javax.swing.JFrame {
 
     private void jBAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAlunoActionPerformed
       
-         ControlaAluno controle = new ControlaAluno();
+         ControleAluno controle = new ControleAluno();
          //controle.verificaCadastro();
          controle.habilitaButtonAluno();
          

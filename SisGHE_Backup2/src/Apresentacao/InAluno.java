@@ -139,7 +139,7 @@ public class InAluno extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCadastrarActionPerformed
-        InCadastroAluno cadastro = new InCadastroAluno();
+        InDadosAluno cadastro = new InDadosAluno();
         cadastro.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jBCadastrarActionPerformed
@@ -147,7 +147,7 @@ public class InAluno extends javax.swing.JFrame {
     private void jBAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAlterarActionPerformed
         //InAlteraAluno inAlterar = new InAlteraAluno();
         //inAlterar.setVisible(true);
-        ControlaAluno Caluno = new ControlaAluno();
+        ControleAluno Caluno = new ControleAluno();
         Caluno.chamaDeserializar();
         Caluno.setaAluno();
         ControlaDisciplina cd = new ControlaDisciplina();
@@ -161,44 +161,11 @@ public class InAluno extends javax.swing.JFrame {
     private void jBExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBExcluirActionPerformed
         // TODO add your handling code here:
         int aux;
-        ControlaAluno.chamaExcluir();
+        ControleAluno.chamaExcluir();
         this.dispose();
     }//GEN-LAST:event_jBExcluirActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(InAluno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(InAluno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(InAluno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(InAluno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new InAluno().setVisible(true);
-            }
-        });
-    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton jBAlterar;
     public javax.swing.JButton jBCadastrar;

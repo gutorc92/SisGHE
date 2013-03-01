@@ -5,7 +5,7 @@
 package Principal;
 import Apresentacao.*;
 import javax.swing.JPanel;
-import Controle.ControlaAluno;
+import Controle.ControleAluno;
 import DAO.SerializaAluno;
 import javax.swing.SwingUtilities;
 import Modelo.*;
