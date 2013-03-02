@@ -3,7 +3,7 @@ package Apresentacao;
 import Controle.*;
 import DAO.DeserializaAluno;
 import DAO.XmlDisciplinasCursadas;
-
+import Controle.Disciplinas.*;
 /**
  *
  * @author david, beatriz
@@ -150,8 +150,8 @@ public class InAluno extends javax.swing.JFrame {
         ControleAluno Caluno = new ControleAluno();
         Caluno.chamaDeserializar();
         Caluno.setaAluno();
-        ControlaDisciplina cd = new ControlaDisciplina();
-        cd.setaDisciplina();
+        Controle.Disciplinas.ControleDisciplinas.chamaSelecionaCheckBox();
+       
 
         this.dispose();
         //inAlterar.setaDados();

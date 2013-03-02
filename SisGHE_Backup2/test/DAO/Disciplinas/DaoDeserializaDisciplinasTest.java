@@ -58,9 +58,8 @@ public class DaoDeserializaDisciplinasTest {
     @Test
     public void testPercorreDisciplinasXml() {
         System.out.println("percorreDisciplinasXml");
-        List<Element> disciplinas = null;
-        ArrayList listDisciplinas = null;
-        DaoDeserializaDisciplinas.percorreDisciplinasXml(disciplinas, listDisciplinas);
+     
+        DaoDeserializaDisciplinas.deserializaDisciplinasXml();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

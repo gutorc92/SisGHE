@@ -17,8 +17,8 @@ public class ControlClass {
     
     public ControlClass () {}
     
-    public static Turma createClassLesson (String name, ArrayList <Dia> days, ArrayList <Hora> hours) {
-        Turma classLesson = new Turma(name, days, hours);
+    public static Turma createClassLesson (String name, ArrayList <Dia> listDias, ArrayList <Hora> listHoras) {
+        Turma classLesson = new Turma(name, listDias, listHoras);
         return classLesson;
     }
             

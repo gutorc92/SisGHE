@@ -204,7 +204,7 @@ public class Principal extends javax.swing.JFrame {
 
     private void jBDisciplinasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBDisciplinasActionPerformed
         // TODO add your handling code here:
-       ChamaDisciplina disciplinas= new ChamaDisciplina();
+       InListDisciplines disciplinas= new InListDisciplines();
         disciplinas.setVisible(true);
         
         

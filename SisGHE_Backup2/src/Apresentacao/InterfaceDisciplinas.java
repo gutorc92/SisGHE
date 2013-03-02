@@ -4,7 +4,7 @@
  */
 package Apresentacao;
 
-import Controle.Disciplinas.ControlSubject;
+import Controle.Disciplinas.ControleDisciplinas;
 import Modelo.Disciplinas.Disciplina;
 import java.awt.GridLayout;
 import java.util.ArrayList;
@@ -29,9 +29,9 @@ public class InterfaceDisciplinas extends JPanel{
         }
     
 
-    public final void buscaDisciplinas(){
-        ControlSubject controlSubect = new ControlSubject();
-         ArrayList <Disciplina> listInterfaceDisciplinas = controlSubect.callDeserialize();
+    private  void buscaDisciplinas(){
+        ControleDisciplinas objControleDisciplinas = new ControleDisciplinas();
+         ArrayList <Disciplina> listInterfaceDisciplinas = objControleDisciplinas.ControledeserializaDisciplinas();
         
         assert(listInterfaceDisciplinas != null);
        

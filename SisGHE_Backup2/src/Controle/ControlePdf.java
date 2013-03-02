@@ -23,13 +23,13 @@ public class ControlePdf {
 
     //neste metodo que serão obtidos o s dados do documento XML
     //aqui serão realizadas as verificações e validações
-    // falta colocar DISCIPLINAS CURSADAS E GRADE HORARIA;
+  
     public void chamaDeserializar(){
         DAO.DeserializaAluno.DeserializaAlunoR(aluno);
-       // disciplinaCursada = DAO.XmlDisciplinasCursadas.DeserializaDisciplinas();
-        listaDisciplina = DAO.Disciplinas.DeserializeSubject.deserializingDisciplines();
+      
+        listaDisciplina = DAO.Disciplinas.DaoDeserializaDisciplinas.deserializaDisciplinasXml();
         
-       System.out.println(listaDisciplina);
+     
     }
 
     public void build(){

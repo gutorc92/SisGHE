@@ -30,11 +30,11 @@ public class DaoDeserializaDisciplinas {
 
     public DaoDeserializaDisciplinas() {
     }
-    static ArrayList<Disciplina> disciplines = ControleDisciplinas.createDisciplines();
-
+    private static ArrayList<Disciplina> disciplines = new ArrayList<Disciplina>();
+    
     public static ArrayList<Disciplina> deserializaDisciplinasXml() {
         SAXBuilder builder = new SAXBuilder();
-
+        
         try {
             Document documento = builder.build("XML/Disciplinas/lista_disciplinas.xml");
 
@@ -47,15 +47,17 @@ public class DaoDeserializaDisciplinas {
 
 
                 percorreDisciplinasXml(lista_disciplinas, disciplines);
+               
             }
         } catch (Exception e) {
             e.printStackTrace();
+        
         }
 
         return disciplines;
     }
 
-    public static void percorreDisciplinasXml(List<Element> disciplinas, ArrayList listDisciplinas) {
+    private static void percorreDisciplinasXml(List<Element> disciplinas, ArrayList listDisciplinas) {
         for (Element e : disciplinas) {
 
 
@@ -68,7 +70,7 @@ public class DaoDeserializaDisciplinas {
                 percorreTurmaXml(turma, classes);
 
             }
-            ControleDisciplinas.registerSubject(listDisciplinas, ControleDisciplinas.createSubject(e.getChildText("nome"), e.getChildText("codigo"), e.getChildText("pre__req"), classes));
+            ControleDisciplinas.adicionaDisciplinaArray(listDisciplinas, ControleDisciplinas.salvaDadosDisciplina(e.getChildText("nome"), e.getChildText("codigo"), e.getChildText("pre__req"), classes));
         }
 
     }
