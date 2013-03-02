@@ -7,7 +7,7 @@ package DAO.Disciplinas;
 import Controle.Disciplinas.ControlClass;
 import Controle.Disciplinas.ControlDay;
 import Controle.Disciplinas.ControlHour;
-import Controle.Disciplinas.ControlSubject;
+import Controle.Disciplinas.ControleDisciplinas;
 import Modelo.Disciplinas.Dia;
 import Modelo.Disciplinas.Disciplina;
 import Modelo.Disciplinas.Hora;
@@ -26,17 +26,17 @@ import org.w3c.dom.NodeList;
  *
  * @author Axs
  */
-public class DeserializaDisciplinas {
+public class DaoDeserializaDisciplinas {
 
-    public DeserializaDisciplinas() {
+    public DaoDeserializaDisciplinas() {
     }
-    static ArrayList<Disciplina> disciplines = ControlSubject.createDisciplines();
+    static ArrayList<Disciplina> disciplines = ControleDisciplinas.createDisciplines();
 
     public static ArrayList<Disciplina> deserializaDisciplinasXml() {
         SAXBuilder builder = new SAXBuilder();
 
         try {
-            Document documento = builder.build("src/DAO/Disciplinas/lista_disciplinas.xml");
+            Document documento = builder.build("XML/Disciplinas/lista_disciplinas.xml");
 
             if (documento == null) {
                 JOptionPane.showMessageDialog(null, "Arquivo inexistente no banco");
@@ -68,7 +68,7 @@ public class DeserializaDisciplinas {
                 percorreTurmaXml(turma, classes);
 
             }
-            ControlSubject.registerSubject(listDisciplinas, ControlSubject.createSubject(e.getChildText("nome"), e.getChildText("codigo"), e.getChildText("pre__req"), classes));
+            ControleDisciplinas.registerSubject(listDisciplinas, ControleDisciplinas.createSubject(e.getChildText("nome"), e.getChildText("codigo"), e.getChildText("pre__req"), classes));
         }
 
     }

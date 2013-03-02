@@ -4,7 +4,7 @@
  */
 package DAO.Disciplinas;
 
-import Controle.Disciplinas.ControlSubject;
+import Controle.Disciplinas.ControleDisciplinas;
 import Modelo.Disciplinas.Dia;
 import Modelo.Disciplinas.Disciplina;
 import Modelo.Disciplinas.Hora;
@@ -25,11 +25,11 @@ import javax.swing.JOptionPane;
  *
  * @author Axs
  */
-public class SerializeSubject {
+public class DaoSerializaDisciplinas {
     private static final String success = "Cadastro e XML gerado com sucesso";
     private static final String fail = "Algum erro ocorreu!";
     
-    public SerializeSubject() {}
+    public DaoSerializaDisciplinas() {}
     
     public static void serializingDisciplines(ArrayList <Disciplina> disciplines) {
         XStream xstream = new XStream(new DomDriver());
@@ -41,7 +41,7 @@ public class SerializeSubject {
         xstream.alias("dia", Dia.class);
         xstream.alias("hora", Hora.class);
         
-        File file = new File("src/DAO/Disciplinas/lista_disciplinas.xml");
+        File file = new File("XML/Disciplinas/lista_disciplinas.xml");
         
         try {
             outputStream = new FileOutputStream(file);
