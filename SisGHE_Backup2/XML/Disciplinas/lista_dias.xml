@@ -1,0 +1,9 @@
+<lista_dias>
+	<dia><codigo>0</codigo>	<nome>Segunda</nome></dia>
+	<dia><codigo>1</codigo>	<nome>Terca</nome></dia>
+	<dia><codigo>2</codigo>	<nome>Quarta</nome></dia>
+	<dia><codigo>3</codigo>	<nome>Quinta</nome></dia>
+	<dia><codigo>4</codigo>	<nome>Sexta</nome></dia>
+	<dia><codigo>5</codigo>	<nome>Sabado</nome></dia>
+	<dia><codigo>6</codigo>	<nome>Domingo</nome></dia>
+</lista_dias>
