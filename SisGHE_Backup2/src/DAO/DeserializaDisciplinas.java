@@ -35,20 +35,10 @@ public class DeserializaDisciplinas {
 
             for (Element e : lista) {
                 {
-
-
-                    /*Nesse trecho é possivel através dos métodos set da Classe DisciplinaCursada 
-                     setar os valores do arquivo xml, direto na classe, e depois se for necessario adcionar o objeto
-                     da classe em uma array*/
-                  
-
+                    
                     DisciplinaCursada dc = new DisciplinaCursada(e.getChildText("nome"), e.getChildText("codigo"), e.getChildText("pre_req"));
                     disciplinas.add(dc);
-
-
-                  
-                    
-                }
+                    }
             }
 
         } catch (Exception e) {

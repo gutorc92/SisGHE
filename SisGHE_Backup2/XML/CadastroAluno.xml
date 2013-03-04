@@ -1,14 +1,8 @@
 <Cadastro>
   <aluno>
-    <nome>Gustavo Coelho</nome>
-    <matricula>110030559</matricula>
-    <curso>Software</curso>
-    <semestre>3º</semestre>
-  </aluno>
-  <aluno>
-    <nome>Gustavo Coelho</nome>
-    <matricula>110030559</matricula>
-    <curso>Software</curso>
-    <semestre>3º</semestre>
+    <nome>dsa</nome>
+    <matricula>110027639</matricula>
+    <curso>dsa</curso>
+    <semestre>1º</semestre>
   </aluno>
 </Cadastro>

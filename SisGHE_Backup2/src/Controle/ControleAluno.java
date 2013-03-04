@@ -9,6 +9,7 @@ import DAO.DeserializaAluno;
 import DAO.DeserializaDisciplinas;
 import DAO.XmlDisciplinasCursadas;
 import Modelo.DisciplinaCursada;
+import Modelo.Disciplinas.Disciplina;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -130,17 +131,17 @@ public class ControleAluno {
     }
 
     public static ArrayList<JCheckBox> gerarJCheckBox() {
-        ArrayList<DisciplinaCursada> listTodasDisciplinas = DeserializaDisciplinas.deserializarDisciplinas();
+        ArrayList<Disciplina> listTodasDisciplinas = DAO.Disciplinas.DaoDeserializaDisciplinas.deserializaDisciplinasXml();
         ArrayList<JCheckBox> listComboBox = new ArrayList<JCheckBox>();
         int i = 10;
-        for (Iterator<DisciplinaCursada> iterator = listTodasDisciplinas.iterator(); iterator.hasNext();) {
+        for (Iterator<Disciplina> iterator = listTodasDisciplinas.iterator(); iterator.hasNext();) {
             JCheckBox jb = new JCheckBox();
-            DisciplinaCursada obDisciplinaCursada = iterator.next();
+            Disciplina obDisciplina = iterator.next();
             jb.setBackground(new java.awt.Color(94, 36, 211));
             jb.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
             jb.setForeground(new java.awt.Color(251, 249, 249));
             jb.setBounds(10, i, 360, 23);
-            jb.setText(obDisciplinaCursada.getNome());
+            jb.setText(obDisciplina.getNome());
             i += 20;
 
             listComboBox.add(jb);
