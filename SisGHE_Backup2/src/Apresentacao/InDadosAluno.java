@@ -316,31 +316,7 @@ public class InDadosAluno extends javax.swing.JFrame {
         return obDisciplinaCursada;
     }
 
-    private void addDisciplina(String nmDisciplina) {
-        try {
-            listDisciplinasCursadas.add(this.getDisciplina(nmDisciplina));
-        } catch (NullPointerException ex) {
-            //nao faz nada
-        }
-    }
-
-    private void rmDisciplina(String nmDisciplina) {
-        try {
-            listDisciplinasCursadas.remove(this.getDisciplina(nmDisciplina));
-        } catch (NullPointerException ex) {
-            //nao faz nada
-        }
-
-    }
-
-    public void actionCheckBox(JCheckBox cb) {
-        if (cb.isSelected()) {
-            this.addDisciplina(cb.getText());
-        }
-        if (!cb.isSelected()) {
-            this.rmDisciplina(cb.getText());
-        }
-    }
+   
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnTeste;
     private javax.swing.JComboBox cbSemestre;
