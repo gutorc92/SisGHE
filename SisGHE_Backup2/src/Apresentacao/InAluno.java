@@ -4,6 +4,10 @@ import Controle.*;
 import DAO.DeserializaAluno;
 import DAO.XmlDisciplinasCursadas;
 import Controle.Disciplinas.*;
+import Modelo.Disciplinas.Disciplina;
+import java.util.ArrayList;
+import java.util.Iterator;
+import javax.swing.JCheckBox;
 /**
  *
  * @author david, beatriz
@@ -142,6 +146,7 @@ public class InAluno extends javax.swing.JFrame {
         InDadosAluno cadastro = new InDadosAluno();
         cadastro.setVisible(true);
         this.dispose();
+        
     }//GEN-LAST:event_jBCadastrarActionPerformed
 
     private void jBAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAlterarActionPerformed
@@ -177,4 +182,10 @@ public class InAluno extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     // End of variables declaration//GEN-END:variables
+
+
+  
+
+
+
 }

@@ -32,13 +32,13 @@ public class ControleDisciplinas {
     
    
     
-    public void ControleSerializaDisciplinas(ArrayList <Disciplina> disciplinas) {
+    public static void ControleSerializaDisciplinas(ArrayList <Disciplina> disciplinas) {
         DaoSerializaDisciplinas.serializaDisciplinas(disciplinas);
     }
     
-    public ArrayList <Disciplina> ControledeserializaDisciplinas() {
-        ArrayList <Disciplina> disciplinas = DaoDeserializaDisciplinas.deserializaDisciplinasXml();
-        return disciplinas;
+    public static ArrayList <Disciplina> ControledeserializaDisciplinas() {
+     return  DaoDeserializaDisciplinas.deserializaDisciplinasXml();
+      
     }
     
     public static void chamaSelecionaCheckBox(){

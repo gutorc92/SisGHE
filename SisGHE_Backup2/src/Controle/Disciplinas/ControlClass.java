@@ -26,9 +26,6 @@ public class ControlClass {
         classes.add(classLesson);
     }
     
-    public static ArrayList <Turma> createClasses () {
-        ArrayList <Turma> classes = new ArrayList <Turma>();
-        return classes;
-    }
+  
 
 }

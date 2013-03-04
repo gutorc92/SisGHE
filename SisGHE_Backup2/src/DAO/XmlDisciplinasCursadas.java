@@ -20,6 +20,8 @@ import org.jdom2.output.XMLOutputter;
  *
  * @author Beatriz Rezener, Felipe
  */
+
+
 public class XmlDisciplinasCursadas {
 
     public static DisciplinaCursada gerarXml(ArrayList<DisciplinaCursada> disciplinasCursadas) {
@@ -89,9 +91,7 @@ public class XmlDisciplinasCursadas {
                 DISCIPLINA.setCodigo(xml.getChildText("codigo"));
                 DISCIPLINA.setCod_preReq(xml.getChildText("pre_req"));
                 disciplinasCursadas.add(DISCIPLINA);
-                //saida para teste
-                //System.out.println(DISCIPLINA.toString()+"\n");
-                //System.out.println(disciplinasCursadas.toString());
+             
    
              }
         

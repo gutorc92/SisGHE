@@ -4,7 +4,7 @@
  */
 package Controle.Disciplinas;
 
-import DAO.Disciplinas.DeserializeDays;
+
 import Modelo.Disciplinas.Dia;
 import java.util.ArrayList;
 
@@ -21,17 +21,15 @@ public class ControlDay {
         return day;
     }
     
-    public static void registerDay (ArrayList <Dia> days, Dia day) {
-        days.add(day);
-    }
+    
 
     public static ArrayList <Dia> createDays () {
         ArrayList <Dia> days = new ArrayList <Dia>();
         return days;
     }
     
-    public ArrayList <Dia> callDeserialize() {
+  /*  public ArrayList <Dia> callDeserialize() {
         return DeserializeDays.deserializingDays();
-    }
+    }*/
     
 }

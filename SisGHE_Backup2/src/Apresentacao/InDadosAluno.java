@@ -4,12 +4,13 @@ import java.util.ArrayList;
 import java.util.Vector;
 import Controle.*;
 import Modelo.DisciplinaCursada;
+import Modelo.Disciplinas.*;
 import java.awt.event.ActionEvent;
 import DAO.*;
 import java.util.Iterator;
 import javax.swing.JCheckBox;
 import javax.swing.JOptionPane;
-
+import Controle.Disciplinas.*;
 /**
  *
  * @author david, beatriz
@@ -28,15 +29,16 @@ public class InDadosAluno extends javax.swing.JFrame {
     }
     
     private void gerarJComboBox(){
-        ArrayList<DisciplinaCursada> listTodasDisciplinas = DeserializaDisciplinas.deserializarDisciplinas();
-        for(Iterator<DisciplinaCursada> iterator = listTodasDisciplinas.iterator(); iterator.hasNext(); ){
+        ArrayList<Disciplina> listTodasDisciplinas = DAO.Disciplinas.DaoDeserializaDisciplinas.deserializaDisciplinasXml();
+        Iterator i = listTodasDisciplinas.iterator();
+        while (i.hasNext()){
+             Disciplina disciplina = (Disciplina) i.next();
             JCheckBox jb = new JCheckBox();
-            DisciplinaCursada obDisciplinaCursada = iterator.next();
-            System.out.println("O nome da disciplina: " + obDisciplinaCursada.getNome());
+           
             jb.setBackground(new java.awt.Color(94, 36, 211));
             jb.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
             jb.setForeground(new java.awt.Color(251, 249, 249));
-            jb.setText(obDisciplinaCursada.getNome());
+            jb.setText(disciplina.getNome());
             this.jPanel2.add(jb);
         }
         
@@ -245,15 +247,13 @@ public class InDadosAluno extends javax.swing.JFrame {
         ControleAluno controle = new ControleAluno();
         controle.CadastraAluno(nome, matricula, curso, semestre);
         controle.chamaSerializar();
-        
+         
        
-
+        
         //Chamar método que gera XML
-        XmlDisciplinasCursadas.gerarXml(listDisciplinasCursadas);
+        //XmlDisciplinasCursadas.gerarXml(listDisciplinasCursadas);
 
-        //Visualizar dados da array, apenas para teste
-        JOptionPane.showMessageDialog(null, "\nNome: " + nome + "\nMatrícula: " + matricula + "\nCurso: " + curso + "\nSemestre: " + semestre + "\n" + listDisciplinasCursadas);
-        this.dispose();
+       
     }//GEN-LAST:event_jBsalvarActionPerformed
 
     private void btnTesteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTesteActionPerformed

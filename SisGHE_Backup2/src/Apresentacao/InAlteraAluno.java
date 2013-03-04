@@ -18,7 +18,7 @@ public class InAlteraAluno extends javax.swing.JFrame {
 
     static ArrayList<DisciplinaCursada> novas_disciplinasCursadas = new ArrayList<DisciplinaCursada>();
     static ArrayList<DisciplinaCursada> disciplinas = DeserializaDisciplinas.deserializarDisciplinas();
-    ArrayList<DisciplinaCursada> disciplinasCursadas = XmlDisciplinasCursadas.DeserializaDisciplinas();
+    
 
     public InAlteraAluno() {
         initComponents();

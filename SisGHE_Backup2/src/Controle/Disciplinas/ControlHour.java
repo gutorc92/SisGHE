@@ -4,7 +4,7 @@
  */
 package Controle.Disciplinas;
 
-import DAO.Disciplinas.DeserializeHours;
+
 import Modelo.Disciplinas.Hora;
 import java.util.ArrayList;
 
@@ -30,8 +30,8 @@ public class ControlHour {
         return hours;
     }
     
-    public ArrayList <Hora> callDeserialize() {
+   /* public ArrayList <Hora> callDeserialize() {
         return DeserializeHours.deserializingHours();
-    }
+    }*/
     
 }

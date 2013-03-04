@@ -63,7 +63,7 @@ public class DaoDeserializaDisciplinas {
 
             List<Element> turmas = e.getChildren("turmas");
 
-            ArrayList<Turma> classes = ControlClass.createClasses();
+            ArrayList<Turma> classes = new ArrayList<Turma>();
 
             for (Element f : turmas) {
                 List<Element> turma = f.getChildren();
@@ -100,8 +100,7 @@ public class DaoDeserializaDisciplinas {
 
 
             for (Element d : dia) {
-
-                ControlDay.registerDay(listDias, ControlDay.createDay(d.getChildText("id__dia"), d.getChildText("nome")));
+                listDias.add(ControlDay.createDay(d.getChildText("id__dia"), d.getChildText("nome")));
             }
 
         }

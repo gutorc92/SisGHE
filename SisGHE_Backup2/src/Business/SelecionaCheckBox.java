@@ -15,7 +15,7 @@ import java.util.ArrayList;
  */
 public class SelecionaCheckBox {
      public static void setaDisciplina() {
-         System.out.println("teste");
+         
         ArrayList<DisciplinaCursada> disciplinasCursadas = XmlDisciplinasCursadas.DeserializaDisciplinas();
         assert(disciplinasCursadas != null);
         for (DisciplinaCursada dc : disciplinasCursadas) {
@@ -24,10 +24,10 @@ public class SelecionaCheckBox {
             if (dc.getNome().equals(InAlteraAluno.Acustica_e_vibracoes_veiculares.getText())) {
                 InAlteraAluno.Acustica_e_vibracoes_veiculares.setSelected(true);
             }
-            if (dc.getNome().equals(InAlteraAluno.Analise_de_sinais_e_design_de_circuitos.getText())) {
+           if (dc.getNome().equals(InAlteraAluno.Analise_de_sinais_e_design_de_circuitos.getText())) {
                 InAlteraAluno.Analise_de_sinais_e_design_de_circuitos.setSelected(true);
             }
-            if (dc.getNome().equals(InAlteraAluno.Calculo1.getText())) {
+           if (dc.getNome().equals(InAlteraAluno.Calculo1.getText())) {
                 InAlteraAluno.Calculo1.setSelected(true);
             }
             if (dc.getNome().equals(InAlteraAluno.Calculo2.getText())) {
