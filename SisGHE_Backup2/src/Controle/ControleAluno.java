@@ -6,11 +6,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import Apresentacao.*;
 import DAO.DeserializaAluno;
+import DAO.DeserializaDisciplinas;
 import DAO.XmlDisciplinasCursadas;
 import Modelo.DisciplinaCursada;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Vector;
+import javax.swing.JCheckBox;
 import javax.swing.JOptionPane;
 
 /**
@@ -41,7 +44,7 @@ public class ControleAluno {
         alunos.add(this.aluno);
 
     }
-    
+
     public void CadastraAluno(String nome, String matricula, String curso, String semestre, ArrayList<DisciplinaCursada> listDisciplinas) {
 
         this.aluno.setNome(nome);
@@ -71,20 +74,16 @@ public class ControleAluno {
 
     }
 
-    public void setaAluno() {
+    public void setaAluno(InDadosAluno obInDadosAluno) {
 
         Aluno novoAluno = (Aluno) DeserializaAluno.listaAluno.get(0);
-
+        ArrayList<DisciplinaCursada> listDisciplinasCursadas = XmlDisciplinasCursadas.DeserializaDisciplinas();
+        System.out.println("A quantidade de materias: "+listDisciplinasCursadas.size());
         String nome = novoAluno.getNome();
         String matricula = novoAluno.getMatricula();
         String curso1 = novoAluno.getCurso();
         String semestre = novoAluno.getSemestre();
-        this.inAltera = new InAlteraAluno(); //Crio a interface e seto os dados nos campos.
-        this.inAltera.setVisible(true);
-        inAltera.jTnome.setText(nome);
-        inAltera.jTmatricula.setText(matricula);
-        inAltera.jTcurso1.setText(curso1);
-        inAltera.cbSemestre.setSelectedItem(semestre);
+        obInDadosAluno.setDados(nome, matricula, curso1, semestre, listDisciplinasCursadas);
         DeserializaAluno.listaAluno.remove(novoAluno);
         //Zerando a array para manter a posição 0 sempre.
     }
@@ -97,6 +96,7 @@ public class ControleAluno {
     public void verificaCadastro() {
         DeserializaAluno.VerificaCadastro();
     }
+
     /**
      * fjslfkj
      */
@@ -112,10 +112,6 @@ public class ControleAluno {
             interfaceAluno.jBAlterar.setEnabled(true);
             interfaceAluno.jBExcluir.setEnabled(true);
         }
-
-
-
-
     }
 
 //FELIPE>>>
@@ -131,5 +127,26 @@ public class ControleAluno {
         } else {
             JOptionPane.showMessageDialog(null, "Aluno e seus dados excluidos com sucesso");
         }
+    }
+
+    public static ArrayList<JCheckBox> gerarJCheckBox() {
+        ArrayList<DisciplinaCursada> listTodasDisciplinas = DeserializaDisciplinas.deserializarDisciplinas();
+        ArrayList<JCheckBox> listComboBox = new ArrayList<JCheckBox>();
+        int i = 10;
+        for (Iterator<DisciplinaCursada> iterator = listTodasDisciplinas.iterator(); iterator.hasNext();) {
+            JCheckBox jb = new JCheckBox();
+            DisciplinaCursada obDisciplinaCursada = iterator.next();
+            jb.setBackground(new java.awt.Color(94, 36, 211));
+            jb.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+            jb.setForeground(new java.awt.Color(251, 249, 249));
+            jb.setBounds(10, i, 360, 23);
+            jb.setText(obDisciplinaCursada.getNome());
+            i += 20;
+
+            listComboBox.add(jb);
+            //this.jScrollPane1.add(this.jPanel1);
+        }
+        return listComboBox;
+
     }
 }
