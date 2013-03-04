@@ -46,7 +46,7 @@ public class DaoSerializaDisciplinas {
         xstream.alias("dia", Dia.class);
         xstream.alias("hora", Hora.class);
         
-        File file = new File("XML/Disciplinas/lista_disciplinas.xml");
+        File file = new File("XML/Disciplinas/Oferta.xml");
         
         try {
             outputStream = new FileOutputStream(file);
@@ -61,6 +61,15 @@ public class DaoSerializaDisciplinas {
         
     }
     
-    
+    public static int excluiXmlCadastro(){
+            File FILE = new File("XML/Disciplinas/Oferta.xml");
+            try{
+                FILE.delete();
+                return 1;
+               }catch(Exception e){
+                   e.printStackTrace(); 
+                   return -1;
+               }
+        }
    
 }

@@ -3,7 +3,7 @@ package Apresentacao;
 import java.util.ArrayList;
 import java.util.Vector;
 import Controle.*;
-import Modelo.DisciplinaCursada;
+
 import Modelo.Disciplinas.*;
 import java.awt.event.ActionEvent;
 import DAO.*;
@@ -19,8 +19,8 @@ import javax.swing.JComponent;
  */
 public class InDadosAluno extends javax.swing.JFrame {
 
-    private ArrayList<DisciplinaCursada> listDisciplinasCursadas = new ArrayList<DisciplinaCursada>();
-    private static ArrayList<DisciplinaCursada> listTodasDisciplinas = DeserializaDisciplinas.deserializarDisciplinas();
+    private ArrayList<Disciplina> listDisciplinasCursadas = new ArrayList<Disciplina>();
+    private static ArrayList<Disciplina> listTodasDisciplinas = DAO.Disciplinas.DaoDeserializaDisciplinas.deserializaDisciplinasXml();
 
     /**
      * Creates new form CadastroAluno
@@ -36,15 +36,15 @@ public class InDadosAluno extends javax.swing.JFrame {
         }
     }
 
-    public void setDados(String nome, String matricula, String curso, String semestre, ArrayList<DisciplinaCursada> disciplinas) {
+    public void setDados(String nome, String matricula, String curso, String semestre, ArrayList<Disciplina> disciplinas) {
         this.setDadosAluno(nome, matricula, curso, semestre);
         this.setDisciplinas(disciplinas);
     }
 
-    private void setDisciplinas(ArrayList<DisciplinaCursada> listDisciplinasCursadas) {
-        Iterator<DisciplinaCursada> iDisciplinasCursadas = listDisciplinasCursadas.iterator();
+    private void setDisciplinas(ArrayList<Disciplina> listDisciplinasCursadas) {
+        Iterator<Disciplina> iDisciplinasCursadas = listDisciplinasCursadas.iterator();
         while (iDisciplinasCursadas.hasNext()) {
-            DisciplinaCursada obDisciplinaCursada = iDisciplinasCursadas.next();
+            Disciplina obDisciplinaCursada = iDisciplinasCursadas.next();
             this.markJCheckBox(obDisciplinaCursada.getNome());
 
         }
@@ -63,21 +63,21 @@ public class InDadosAluno extends javax.swing.JFrame {
         }
     }
 
-    private ArrayList<DisciplinaCursada> gerarListDisciplinasCursadas() {
-        ArrayList<DisciplinaCursada> listDisciplinasCursadas = new ArrayList<DisciplinaCursada>();
+    private ArrayList<Disciplina> gerarListDisciplinasCursadas() {
+        ArrayList<Disciplina> listaDisciplinasCursadas = new ArrayList<Disciplina>();
         for (int i = 0; i < this.jPanel1.getComponentCount(); i++) {
             JComponent obJComponent = (JComponent) this.jPanel1.getComponent(i);
             if (obJComponent instanceof JCheckBox) {
                 JCheckBox obJCheckBox = (JCheckBox) obJComponent;
                 if (obJCheckBox.isSelected() == true) {
                     try {
-                        listDisciplinasCursadas.add(this.getDisciplina(obJCheckBox.getText()));
+                        listaDisciplinasCursadas.add(this.getDisciplina(obJCheckBox.getText()));
                     } catch (NullPointerException ex) {
                     }
                 }
             }
         }
-        return listDisciplinasCursadas;
+        return listaDisciplinasCursadas;
     }
 
     private void setDadosAluno(String nome, String matricula, String curso, String semestre) {
@@ -287,8 +287,7 @@ public class InDadosAluno extends javax.swing.JFrame {
         }
         
 
-        //Chamar método que gera XML
-        XmlDisciplinasCursadas.gerarXml(listDisciplinasCursadas);
+      
 
        
 
@@ -309,17 +308,17 @@ public class InDadosAluno extends javax.swing.JFrame {
      * @param nmDisciplina nome da disciplina desejada
      * @return objeto DisciplinaCursada
      */
-    private DisciplinaCursada getDisciplina(String nmDisciplina) {
-        DisciplinaCursada obDisciplinaCursada = null;
-        for (DisciplinaCursada obProvDiscplinaCursada : listTodasDisciplinas) {
-            if (obProvDiscplinaCursada.getNome().equalsIgnoreCase(nmDisciplina)) {
-                obDisciplinaCursada = obProvDiscplinaCursada;
+    private Disciplina getDisciplina(String nmDisciplina) {
+        Disciplina obDisciplina = null;
+        for (Disciplina obProvDiscplina : listTodasDisciplinas) {
+            if (obProvDiscplina.getNome().equalsIgnoreCase(nmDisciplina)) {
+                obDisciplina = obProvDiscplina;
             }
         }
-        if (obDisciplinaCursada == null) {
+        if (obDisciplina == null) {
             throw new NullPointerException();
         }
-        return obDisciplinaCursada;
+        return obDisciplina;
     }
 
    

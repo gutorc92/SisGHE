@@ -1,19 +1,13 @@
 package Controle;
 
-import Modelo.Aluno;
-import DAO.SerializaAluno;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import Apresentacao.*;
 import DAO.DeserializaAluno;
-import DAO.DeserializaDisciplinas;
-import DAO.XmlDisciplinasCursadas;
-import Modelo.DisciplinaCursada;
+import DAO.SerializaAluno;
+import Modelo.Aluno;
 import Modelo.Disciplinas.Disciplina;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Vector;
 import javax.swing.JCheckBox;
 import javax.swing.JOptionPane;
 
@@ -46,24 +40,18 @@ public class ControleAluno {
 
     }
 
-    public void CadastraAluno(String nome, String matricula, String curso, String semestre, ArrayList<DisciplinaCursada> listDisciplinas) {
-
-        this.aluno.setNome(nome);
-        this.aluno.setMatricula(matricula);
-        this.aluno.setCurso(curso);
-        this.aluno.setSemestre(semestre);
-        alunos.add(this.aluno);
+    public void CadastraAluno(String nome, String matricula, String curso, String semestre, ArrayList<Disciplina> arrayDisciplinasCursadas) {
+        Aluno alunoCadastrar = new Aluno(nome,matricula,curso,semestre);
+        alunos.add(alunoCadastrar);
         this.chamaSerializar();
-        XmlDisciplinasCursadas.gerarXml(listDisciplinas);
+        DAO.Disciplinas.DaoSerializaDisciplinas.serializaDisciplinas(arrayDisciplinasCursadas);
 
     }
 
-    public void AlterarAluno(String nome, String matricula, String curso, String semestre) throws IllegalArgumentException {
-        this.aluno.setNome(nome);
-        this.aluno.setMatricula(matricula);
-        this.aluno.setCurso(curso);
-        this.aluno.setSemestre(semestre);
-        alteraAluno.add(aluno);
+    public void AlterarAluno(String nome, String matricula, String curso, String semestre,ArrayList<Disciplina> novo_arrayDisciplinasCursadas ) throws IllegalArgumentException {
+        Aluno alunoAlterar = new Aluno(nome,matricula,curso,semestre);
+        alteraAluno.add(alunoAlterar);
+        DAO.Disciplinas.DaoSerializaDisciplinas.serializaDisciplinas(novo_arrayDisciplinasCursadas);
     }
 
     public void chamaSerializar() {
@@ -78,7 +66,7 @@ public class ControleAluno {
     public void setaAluno(InDadosAluno obInDadosAluno) {
 
         Aluno novoAluno = (Aluno) DeserializaAluno.listaAluno.get(0);
-        ArrayList<DisciplinaCursada> listDisciplinasCursadas = XmlDisciplinasCursadas.DeserializaDisciplinas();
+        ArrayList<Disciplina> listDisciplinasCursadas = DAO.Disciplinas.DeserializaDisciplinasCursadas.deserializaDisciplinasCursadasXml();
         System.out.println("A quantidade de materias: "+listDisciplinasCursadas.size());
         String nome = novoAluno.getNome();
         String matricula = novoAluno.getMatricula();
@@ -121,7 +109,7 @@ public class ControleAluno {
 
         aux = DeserializaAluno.excluiXmlAluno();
 
-        aux += XmlDisciplinasCursadas.excluiXmlCadastro();
+        aux += DAO.Disciplinas.DaoSerializaDisciplinas.excluiXmlCadastro();
 
         if (aux <= 0) {
             JOptionPane.showMessageDialog(null, "Nao foi possivel excluir o arquivo");

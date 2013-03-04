@@ -3,7 +3,7 @@ package Controle;
 import DAO.DeserializaAluno;
 import DAO.GerarPdf;
 import Modelo.Aluno;
-import Modelo.DisciplinaCursada;
+
 import Modelo.Disciplinas.Disciplina;
 import java.util.ArrayList;
 
@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class ControlePdf {
     
     private Aluno aluno = new Aluno();
-    private ArrayList<DisciplinaCursada> disciplinaCursada = new ArrayList<DisciplinaCursada>();
+    private ArrayList<Disciplina> disciplinaCursada = new ArrayList<Disciplina>();
     private static ArrayList<Disciplina> listaDisciplina;
 
     public ControlePdf() {

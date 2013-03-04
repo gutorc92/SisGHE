@@ -5,8 +5,8 @@
 package Business;
 
 import Apresentacao.InAlteraAluno;
-import DAO.XmlDisciplinasCursadas;
-import Modelo.DisciplinaCursada;
+
+import Modelo.Disciplinas.Disciplina;
 import java.util.ArrayList;
 
 /**
@@ -16,9 +16,9 @@ import java.util.ArrayList;
 public class SelecionaCheckBox {
      public static void setaDisciplina() {
          
-        ArrayList<DisciplinaCursada> disciplinasCursadas = XmlDisciplinasCursadas.DeserializaDisciplinas();
+        ArrayList<Disciplina> disciplinasCursadas = DAO.Disciplinas.DeserializaDisciplinasCursadas.deserializaDisciplinasCursadasXml();
         assert(disciplinasCursadas != null);
-        for (DisciplinaCursada dc : disciplinasCursadas) {
+        for (Disciplina dc : disciplinasCursadas) {
 
 
             if (dc.getNome().equals(InAlteraAluno.Acustica_e_vibracoes_veiculares.getText())) {

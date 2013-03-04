@@ -2,7 +2,7 @@ package Apresentacao;
 
 import Controle.*;
 import DAO.DeserializaAluno;
-import DAO.XmlDisciplinasCursadas;
+
 import Controle.Disciplinas.*;
 import Modelo.Disciplinas.Disciplina;
 import java.util.ArrayList;

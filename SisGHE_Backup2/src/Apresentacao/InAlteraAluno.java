@@ -3,9 +3,10 @@ package Apresentacao;
 import java.util.ArrayList;
 import java.util.Vector;
 import Controle.*;
-import Modelo.DisciplinaCursada;
+
 import java.awt.event.ActionEvent;
 import DAO.*;
+import Modelo.Disciplinas.Disciplina;
 import java.util.Iterator;
 import javax.swing.JCheckBox;
 import javax.swing.JOptionPane;
@@ -16,8 +17,8 @@ import javax.swing.JOptionPane;
  */
 public class InAlteraAluno extends javax.swing.JFrame {
 
-    static ArrayList<DisciplinaCursada> novas_disciplinasCursadas = new ArrayList<DisciplinaCursada>();
-    static ArrayList<DisciplinaCursada> disciplinas = DeserializaDisciplinas.deserializarDisciplinas();
+    static ArrayList<Disciplina> novo_disciplinasCursadas = new ArrayList<Disciplina>();
+    static ArrayList<Disciplina> disciplinas = DAO.Disciplinas.DaoDeserializaDisciplinas.deserializaDisciplinasXml();
     
 
     public InAlteraAluno() {
@@ -551,7 +552,7 @@ public class InAlteraAluno extends javax.swing.JFrame {
         String curso = jTcurso1.getText();
         String semestre = cbSemestre.getSelectedItem().toString();
         ControleAluno controle = new ControleAluno();
-        controle.AlterarAluno(nome, matricula, curso, semestre);
+        controle.AlterarAluno(nome, matricula, curso, semestre,novo_disciplinasCursadas);
         controle.chamaSerializarAlterar();
 
         verifica(Acustica_e_vibracoes_veiculares);
@@ -565,12 +566,11 @@ public class InAlteraAluno extends javax.swing.JFrame {
         verifica(Comunicacoes_digitais_para_engenharia);
         verifica(Dinamica_de_veiculos);
 
-        //Chamar método que gera XML
-        XmlDisciplinasCursadas.gerarXml(novas_disciplinasCursadas);
+        
 
         //Visualizar dados da array, apenas para teste
-        JOptionPane.showMessageDialog(null, "\nNovas Informações:\nNome: " + nome + "\nMatrícula: " + matricula + "\nCurso: " + curso + "\nSemestre: " + semestre + "\n" + novas_disciplinasCursadas);
-        this.dispose();
+        //JOptionPane.showMessageDialog(null, "\nNovas Informações:\nNome: " + nome + "\nMatrícula: " + matricula + "\nCurso: " + curso + "\nSemestre: " + semestre + "\n" + novas_disciplinasCursadas);
+        //this.dispose();
     }//GEN-LAST:event_jBalterarActionPerformed
 
     private void Analise_de_sinais_e_design_de_circuitosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Analise_de_sinais_e_design_de_circuitosActionPerformed
@@ -579,27 +579,27 @@ public class InAlteraAluno extends javax.swing.JFrame {
 
     public static void verifica(JCheckBox cb) {
 
-        DisciplinaCursada dp = new DisciplinaCursada();
+        Disciplina dp = new Disciplina();
         int achei = 0;
         if (cb.isSelected()) {
-            for (DisciplinaCursada dc : disciplinas) {
+            for (Disciplina dc : disciplinas) {
                 if (dc.getNome().equalsIgnoreCase(cb.getText())) {
-                    dp = new DisciplinaCursada(cb.getText(), dc.getCodigo(), dc.getCod_preReq());
+                    dp = new Disciplina(cb.getText(), dc.getCodigo(), dc.getPre_req(),dc.getTurmas() );
                 }
             }
-            for (DisciplinaCursada ndc : novas_disciplinasCursadas) {
+            for (Disciplina ndc : novo_disciplinasCursadas) {
                 if (ndc.getNome().equals(dp.getNome())) {
                     achei++;
                 }
             }
             if (achei == 0) {
-                novas_disciplinasCursadas.add(dp);
+                novo_disciplinasCursadas.add(dp);
             }
         }
         if (!cb.isSelected()) {
 
-            for (Iterator<DisciplinaCursada> it = novas_disciplinasCursadas.iterator(); it.hasNext();) {
-                DisciplinaCursada n = it.next();
+            for (Iterator<Disciplina> it = novo_disciplinasCursadas.iterator(); it.hasNext();) {
+                Disciplina n = it.next();
                 if (cb.getText().contains(n.getNome())) {
                     it.remove();
                 }
