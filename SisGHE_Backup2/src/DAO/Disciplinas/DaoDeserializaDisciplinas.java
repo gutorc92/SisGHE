@@ -13,14 +13,11 @@ import Modelo.Disciplinas.Disciplina;
 import Modelo.Disciplinas.Hora;
 import Modelo.Disciplinas.Turma;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import javax.swing.JOptionPane;
-import org.jdom2.Content;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.input.SAXBuilder;
-import org.w3c.dom.NodeList;
 
 /**
  *
@@ -31,12 +28,13 @@ public class DaoDeserializaDisciplinas {
     public DaoDeserializaDisciplinas() {
     }
     private static ArrayList<Disciplina> disciplines = new ArrayList<Disciplina>();
-    
+
     public static ArrayList<Disciplina> deserializaDisciplinasXml() {
         SAXBuilder builder = new SAXBuilder();
-        
+        Document documento;       //Variavel da Library Jdom para manipular arquivos Xml
+
         try {
-            Document documento = builder.build("XML/Disciplinas/lista_disciplinas.xml");
+            documento = builder.build("XML/Disciplinas/lista_disciplinas.xml");
 
             if (documento == null) {
                 JOptionPane.showMessageDialog(null, "Arquivo inexistente no banco");
@@ -47,79 +45,99 @@ public class DaoDeserializaDisciplinas {
 
 
                 percorreDisciplinasXml(lista_disciplinas, disciplines);
-               
+
             }
         } catch (Exception e) {
             e.printStackTrace();
-        
+
         }
 
         return disciplines;
     }
 
     private static void percorreDisciplinasXml(List<Element> disciplinas, ArrayList listDisciplinas) {
-        for (Element e : disciplinas) {
+        try {
+            for (Element e : disciplinas) {
 
 
-            List<Element> turmas = e.getChildren("turmas");
+                List<Element> turmas = e.getChildren("turmas");
 
-            ArrayList<Turma> classes = new ArrayList<Turma>();
+                ArrayList<Turma> classes = new ArrayList<Turma>();
 
-            for (Element f : turmas) {
-                List<Element> turma = f.getChildren();
-                percorreTurmaXml(turma, classes);
+                for (Element f : turmas) {
+                    List<Element> turma = f.getChildren();
+                    percorreTurmaXml(turma, classes);
 
+                }
+                ControleDisciplinas.adicionaDisciplinaArray(listDisciplinas, ControleDisciplinas.salvaDadosDisciplina(e.getChildText("nome"), e.getChildText("codigo"), e.getChildText("pre__req"), classes));
             }
-            ControleDisciplinas.adicionaDisciplinaArray(listDisciplinas, ControleDisciplinas.salvaDadosDisciplina(e.getChildText("nome"), e.getChildText("codigo"), e.getChildText("pre__req"), classes));
-        }
-
-    }
-
-    private static void percorreTurmaXml(List<Element> turma, ArrayList<Turma> classes) {
-
-        for (Element t : turma) {
-
-
-            List<Element> dias = t.getChildren("dias");
-            List<Element> horas = t.getChildren("horas");
-
-            ArrayList<Dia> days = ControlDay.createDays();
-            ArrayList<Hora> hours = ControlHour.createHours();
-
-            percorreDiasXml(dias, days);
-            percorreHorasXml(horas, hours);
-            ControlClass.registerClassLesson(classes, ControlClass.createClassLesson(t.getChildText("nome"), days, hours));
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
-    private static void percorreDiasXml(List<Element> dias, ArrayList<Dia> listDias) {
+    private static void percorreTurmaXml(List<Element> listTurma, ArrayList<Turma> arrayClasses) {
+        assert (listTurma != null || arrayClasses != null);
+        try {
+            for (Element t : listTurma) {
 
-        for (Element g : dias) {
 
-            List<Element> dia = g.getChildren("dia");
+                List<Element> dias = t.getChildren("dias");
+                List<Element> horas = t.getChildren("horas");
 
+                ArrayList<Dia> days = ControlDay.createDays();
+                ArrayList<Hora> hours = ControlHour.createHours();
 
-            for (Element d : dia) {
-                listDias.add(ControlDay.createDay(d.getChildText("id__dia"), d.getChildText("nome")));
+                percorreDiasXml(dias, days);
+                percorreHorasXml(horas, hours);
+                ControlClass.registerClassLesson(arrayClasses, ControlClass.createClassLesson(t.getChildText("nome"), days, hours));
             }
-
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-
     }
 
-    private static void percorreHorasXml(List<Element> horas, ArrayList<Hora> listHoras) {
+    private static void percorreDiasXml(List<Element> listDias, ArrayList<Dia> arrayDias) {
 
-        for (Element i : horas) {
+        assert (listDias != null || listDias != null);
+        try {
+            for (Element g : listDias) {
 
-            List<Element> hora = i.getChildren("hora");
+                List<Element> dia = g.getChildren("dia");
 
 
-            for (Element h : hora) {
-
-                ControlHour.registerHour(listHoras, ControlHour.createHour(h.getChildText("id__hora"), h.getChildText("nome")));
+                for (Element d : dia) {
+                    arrayDias.add(ControlDay.createDay(d.getChildText("id__dia"), d.getChildText("nome")));
+                }
 
             }
 
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+    }
+
+    private static void percorreHorasXml(List<Element> listHoras, ArrayList<Hora> arrayHoras) {
+        assert (listHoras != null || arrayHoras != null);
+        try {
+            for (Element i : listHoras) {
+
+                List<Element> hora = i.getChildren("hora");
+
+
+                for (Element h : hora) {
+
+                    ControlHour.registerHour(arrayHoras, ControlHour.createHour(h.getChildText("id__hora"), h.getChildText("nome")));
+
+                }
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void adicionaDisciplinaArray(ArrayList<Disciplina> listDisciplinas, Disciplina novaDisciplina) {
+        listDisciplinas.add(novaDisciplina);
     }
 }

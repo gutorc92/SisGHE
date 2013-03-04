@@ -286,6 +286,12 @@ public class InDadosAluno extends javax.swing.JFrame {
             ex.printStackTrace();
         }
         
+
+        //Chamar método que gera XML
+        XmlDisciplinasCursadas.gerarXml(listDisciplinasCursadas);
+
+       
+
     }//GEN-LAST:event_jBsalvarActionPerformed
 
     private void btnTesteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTesteActionPerformed
