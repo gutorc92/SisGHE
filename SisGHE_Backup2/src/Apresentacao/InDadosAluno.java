@@ -251,7 +251,7 @@ public class InDadosAluno extends javax.swing.JFrame {
        
         
         //Chamar método que gera XML
-        //XmlDisciplinasCursadas.gerarXml(listDisciplinasCursadas);
+        XmlDisciplinasCursadas.gerarXml(listDisciplinasCursadas);
 
        
     }//GEN-LAST:event_jBsalvarActionPerformed
