@@ -144,6 +144,9 @@ public class InAluno extends javax.swing.JFrame {
 
     private void jBCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCadastrarActionPerformed
         InDadosAluno cadastro = new InDadosAluno();
+        ArrayList<JCheckBox> listJCheckBox;
+        listJCheckBox = ControleAluno.gerarJCheckBox();
+        cadastro.addJComboBox(listJCheckBox);
         cadastro.setVisible(true);
         this.dispose();
         
@@ -152,12 +155,12 @@ public class InAluno extends javax.swing.JFrame {
     private void jBAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAlterarActionPerformed
         //InAlteraAluno inAlterar = new InAlteraAluno();
         //inAlterar.setVisible(true);
+         InDadosAluno obInDadosAluno = new InDadosAluno();
+        obInDadosAluno.addJComboBox(ControleAluno.gerarJCheckBox());
         ControleAluno Caluno = new ControleAluno();
         Caluno.chamaDeserializar();
-        Caluno.setaAluno();
-        Controle.Disciplinas.ControleDisciplinas.chamaSelecionaCheckBox();
-       
-
+        Caluno.setaAluno(obInDadosAluno);
+        obInDadosAluno.setVisible(true);
         this.dispose();
         //inAlterar.setaDados();
     }//GEN-LAST:event_jBAlterarActionPerformed

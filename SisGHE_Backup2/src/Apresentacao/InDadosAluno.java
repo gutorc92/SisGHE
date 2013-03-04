@@ -11,6 +11,8 @@ import java.util.Iterator;
 import javax.swing.JCheckBox;
 import javax.swing.JOptionPane;
 import Controle.Disciplinas.*;
+import javax.swing.JComponent;
+
 /**
  *
  * @author david, beatriz
@@ -25,24 +27,64 @@ public class InDadosAluno extends javax.swing.JFrame {
      */
     public InDadosAluno() {
         initComponents();
-        this.gerarJComboBox();
+        //this.gerarJComboBox();
     }
-    
-    private void gerarJComboBox(){
-        ArrayList<Disciplina> listTodasDisciplinas = DAO.Disciplinas.DaoDeserializaDisciplinas.deserializaDisciplinasXml();
-        Iterator i = listTodasDisciplinas.iterator();
-        while (i.hasNext()){
-             Disciplina disciplina = (Disciplina) i.next();
-            JCheckBox jb = new JCheckBox();
-           
-            jb.setBackground(new java.awt.Color(94, 36, 211));
-            jb.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
-            jb.setForeground(new java.awt.Color(251, 249, 249));
-            jb.setText(disciplina.getNome());
-            this.jPanel2.add(jb);
+
+    public void addJComboBox(ArrayList<JCheckBox> listCheckBox) {
+        for (int i = 0; i < listCheckBox.size(); i++) {
+            this.jPanel1.add(listCheckBox.get(i));
         }
-        
-        //this.jPanel1.repaint();
+    }
+
+    public void setDados(String nome, String matricula, String curso, String semestre, ArrayList<DisciplinaCursada> disciplinas) {
+        this.setDadosAluno(nome, matricula, curso, semestre);
+        this.setDisciplinas(disciplinas);
+    }
+
+    private void setDisciplinas(ArrayList<DisciplinaCursada> listDisciplinasCursadas) {
+        Iterator<DisciplinaCursada> iDisciplinasCursadas = listDisciplinasCursadas.iterator();
+        while (iDisciplinasCursadas.hasNext()) {
+            DisciplinaCursada obDisciplinaCursada = iDisciplinasCursadas.next();
+            this.markJCheckBox(obDisciplinaCursada.getNome());
+
+        }
+    }
+
+    private void markJCheckBox(String nomeDisciplinas) {
+        for (int i = 0; i < this.jPanel1.getComponentCount(); i++) {
+            JComponent obJComponent = (JComponent) this.jPanel1.getComponent(i);
+            if (obJComponent instanceof JCheckBox) {
+                JCheckBox obJCheckBox = (JCheckBox) obJComponent;
+                System.out.println("a disciplina " + nomeDisciplinas);
+                if (obJCheckBox.getText().equals(nomeDisciplinas)) {
+                    obJCheckBox.setSelected(true);
+                }
+            }
+        }
+    }
+
+    private ArrayList<DisciplinaCursada> gerarListDisciplinasCursadas() {
+        ArrayList<DisciplinaCursada> listDisciplinasCursadas = new ArrayList<DisciplinaCursada>();
+        for (int i = 0; i < this.jPanel1.getComponentCount(); i++) {
+            JComponent obJComponent = (JComponent) this.jPanel1.getComponent(i);
+            if (obJComponent instanceof JCheckBox) {
+                JCheckBox obJCheckBox = (JCheckBox) obJComponent;
+                if (obJCheckBox.isSelected() == true) {
+                    try {
+                        listDisciplinasCursadas.add(this.getDisciplina(obJCheckBox.getText()));
+                    } catch (NullPointerException ex) {
+                    }
+                }
+            }
+        }
+        return listDisciplinasCursadas;
+    }
+
+    private void setDadosAluno(String nome, String matricula, String curso, String semestre) {
+        this.jTnome.setText(nome);
+        this.jTmatricula.setText(matricula);
+        this.jTcurso.setText(curso);
+        this.cbSemestre.setSelectedItem(semestre);
     }
 
     /**
@@ -65,7 +107,6 @@ public class InDadosAluno extends javax.swing.JFrame {
         cbSemestre = new javax.swing.JComboBox();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
-        jCheckBox1 = new javax.swing.JCheckBox();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
@@ -101,23 +142,15 @@ public class InDadosAluno extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(94, 36, 211));
         jPanel1.setForeground(new java.awt.Color(255, 250, 250));
 
-        jCheckBox1.setText("Teste");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jCheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(121, Short.MAX_VALUE))
+            .addGap(0, 353, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jCheckBox1)
-                .addContainerGap(1304, Short.MAX_VALUE))
+            .addGap(0, 1334, Short.MAX_VALUE)
         );
 
         jScrollPane1.setViewportView(jPanel1);
@@ -245,15 +278,14 @@ public class InDadosAluno extends javax.swing.JFrame {
         String curso = jTcurso.getText();
         String semestre = cbSemestre.getSelectedItem().toString();
         ControleAluno controle = new ControleAluno();
-        controle.CadastraAluno(nome, matricula, curso, semestre);
-        controle.chamaSerializar();
-         
-       
+        try{
+            controle.CadastraAluno(nome, matricula, curso, semestre,this.gerarListDisciplinasCursadas());
+            controle.chamaSerializar();
+            this.dispose();
+        }catch(Exception ex){
+            ex.printStackTrace();
+        }
         
-        //Chamar método que gera XML
-        //XmlDisciplinasCursadas.gerarXml(listDisciplinasCursadas);
-
-       
     }//GEN-LAST:event_jBsalvarActionPerformed
 
     private void btnTesteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTesteActionPerformed
@@ -261,46 +293,46 @@ public class InDadosAluno extends javax.swing.JFrame {
         jTcurso.setText("Curso");
         jTmatricula.setText("110035467");
         cbSemestre.setSelectedIndex(7);
-        
-        
+
+
     }//GEN-LAST:event_btnTesteActionPerformed
-    
-    
+
     /**
      * Encontrar disciplina na lista
+     *
      * @param nmDisciplina nome da disciplina desejada
      * @return objeto DisciplinaCursada
      */
-    private DisciplinaCursada getDisciplina(String nmDisciplina){
+    private DisciplinaCursada getDisciplina(String nmDisciplina) {
         DisciplinaCursada obDisciplinaCursada = null;
-        for (DisciplinaCursada obProvDiscplinaCursada  : listTodasDisciplinas) {
-                if (obProvDiscplinaCursada.getNome().equalsIgnoreCase(nmDisciplina)) {
-                    obDisciplinaCursada = obProvDiscplinaCursada;
-                }
+        for (DisciplinaCursada obProvDiscplinaCursada : listTodasDisciplinas) {
+            if (obProvDiscplinaCursada.getNome().equalsIgnoreCase(nmDisciplina)) {
+                obDisciplinaCursada = obProvDiscplinaCursada;
+            }
         }
-        if(obDisciplinaCursada == null){
+        if (obDisciplinaCursada == null) {
             throw new NullPointerException();
         }
         return obDisciplinaCursada;
     }
-    
-    private void addDisciplina(String nmDisciplina){
-        try{
+
+    private void addDisciplina(String nmDisciplina) {
+        try {
             listDisciplinasCursadas.add(this.getDisciplina(nmDisciplina));
-        }catch(NullPointerException ex){
+        } catch (NullPointerException ex) {
             //nao faz nada
         }
     }
-    
-    private void rmDisciplina(String nmDisciplina){
-        try{
-           listDisciplinasCursadas.remove(this.getDisciplina(nmDisciplina));
-       }catch(NullPointerException ex){
-           //nao faz nada
-       }
-        
+
+    private void rmDisciplina(String nmDisciplina) {
+        try {
+            listDisciplinasCursadas.remove(this.getDisciplina(nmDisciplina));
+        } catch (NullPointerException ex) {
+            //nao faz nada
+        }
+
     }
-    
+
     public void actionCheckBox(JCheckBox cb) {
         if (cb.isSelected()) {
             this.addDisciplina(cb.getText());
@@ -309,13 +341,10 @@ public class InDadosAluno extends javax.swing.JFrame {
             this.rmDisciplina(cb.getText());
         }
     }
-
-   
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnTeste;
     private javax.swing.JComboBox cbSemestre;
     private javax.swing.JButton jBsalvar;
-    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLcurso;
     private javax.swing.JLabel jLmatricula;
