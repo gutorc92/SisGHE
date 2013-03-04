@@ -19,7 +19,6 @@ import javax.swing.JComponent;
  */
 public class InDadosAluno extends javax.swing.JFrame {
 
-    private ArrayList<Disciplina> listDisciplinasCursadas = new ArrayList<Disciplina>();
     private static ArrayList<Disciplina> listTodasDisciplinas = DAO.Disciplinas.DaoDeserializaDisciplinas.deserializaDisciplinasXml();
 
     /**
@@ -27,7 +26,6 @@ public class InDadosAluno extends javax.swing.JFrame {
      */
     public InDadosAluno() {
         initComponents();
-        //this.gerarJComboBox();
     }
 
     public void addJComboBox(ArrayList<JCheckBox> listCheckBox) {
@@ -35,10 +33,18 @@ public class InDadosAluno extends javax.swing.JFrame {
             this.jPanel1.add(listCheckBox.get(i));
         }
     }
-
-    public void setDados(String nome, String matricula, String curso, String semestre, ArrayList<Disciplina> disciplinas) {
+    
+    /**
+     * Metodo para servir de interface entre a classe view e a classe controle
+     * @param nome
+     * @param matricula
+     * @param curso
+     * @param semestre
+     * @param listDisciplinasCursadas lista de disciplinas cursadas
+     */
+    public void setDados(String nome, String matricula, String curso, String semestre, ArrayList<Disciplina> listDisciplinasCursadas) {
         this.setDadosAluno(nome, matricula, curso, semestre);
-        this.setDisciplinas(disciplinas);
+        this.setDisciplinas(listDisciplinasCursadas);
     }
 
     private void setDisciplinas(ArrayList<Disciplina> listDisciplinasCursadas) {
@@ -51,31 +57,38 @@ public class InDadosAluno extends javax.swing.JFrame {
     }
 
     private void markJCheckBox(String nomeDisciplinas) {
-        for (int i = 0; i < this.jPanel1.getComponentCount(); i++) {
-            JComponent obJComponent = (JComponent) this.jPanel1.getComponent(i);
-            if (obJComponent instanceof JCheckBox) {
-                JCheckBox obJCheckBox = (JCheckBox) obJComponent;
-                System.out.println("a disciplina " + nomeDisciplinas);
-                if (obJCheckBox.getText().equals(nomeDisciplinas)) {
+        System.out.println("a disciplina " + nomeDisciplinas);
+        for(Iterator<JCheckBox> iJCheckBox = this.getCheckBoxs().iterator();iJCheckBox.hasNext();){
+            JCheckBox obJCheckBox = iJCheckBox.next();
+            if (obJCheckBox.getText().equals(nomeDisciplinas)) {
                     obJCheckBox.setSelected(true);
-                }
             }
         }
+    }
+    
+    private ArrayList<JCheckBox> getCheckBoxs(){
+        ArrayList<JCheckBox> listJCheckBox = new ArrayList<JCheckBox>();
+         for (int i = 0; i < this.jPanel1.getComponentCount(); i++) {
+             JComponent obJComponent = (JComponent) this.jPanel1.getComponent(i);
+             if (obJComponent instanceof JCheckBox) {
+                   JCheckBox obJCheckBox = (JCheckBox) obJComponent;
+                   listJCheckBox.add(obJCheckBox);
+             }
+         }
+         return listJCheckBox;
     }
 
     private ArrayList<Disciplina> gerarListDisciplinasCursadas() {
         ArrayList<Disciplina> listaDisciplinasCursadas = new ArrayList<Disciplina>();
-        for (int i = 0; i < this.jPanel1.getComponentCount(); i++) {
-            JComponent obJComponent = (JComponent) this.jPanel1.getComponent(i);
-            if (obJComponent instanceof JCheckBox) {
-                JCheckBox obJCheckBox = (JCheckBox) obJComponent;
-                if (obJCheckBox.isSelected() == true) {
+        for(Iterator<JCheckBox> iJCheckBox = this.getCheckBoxs().iterator();iJCheckBox.hasNext();){
+            JCheckBox obJCheckBox = iJCheckBox.next();
+            if (obJCheckBox.isSelected() == true) {
                     try {
                         listaDisciplinasCursadas.add(this.getDisciplina(obJCheckBox.getText()));
                     } catch (NullPointerException ex) {
+                        //Nao faz nada
                     }
-                }
-            }
+           }
         }
         return listaDisciplinasCursadas;
     }

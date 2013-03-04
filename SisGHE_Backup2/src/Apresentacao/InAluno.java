@@ -1,13 +1,10 @@
 package Apresentacao;
 
 import Controle.*;
-import DAO.DeserializaAluno;
 
-import Controle.Disciplinas.*;
-import Modelo.Disciplinas.Disciplina;
 import java.util.ArrayList;
-import java.util.Iterator;
 import javax.swing.JCheckBox;
+import Apresentacao.InDadosAluno;
 /**
  *
  * @author david, beatriz
@@ -143,7 +140,7 @@ public class InAluno extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCadastrarActionPerformed
-        InDadosAluno cadastro = new InDadosAluno();
+        InDadosAluno cadastro = new Apresentacao.InDadosAluno();
         ArrayList<JCheckBox> listJCheckBox;
         listJCheckBox = ControleAluno.gerarJCheckBox();
         cadastro.addJComboBox(listJCheckBox);
@@ -155,7 +152,7 @@ public class InAluno extends javax.swing.JFrame {
     private void jBAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAlterarActionPerformed
         //InAlteraAluno inAlterar = new InAlteraAluno();
         //inAlterar.setVisible(true);
-         InDadosAluno obInDadosAluno = new InDadosAluno();
+        InDadosAluno obInDadosAluno = new InDadosAluno();
         obInDadosAluno.addJComboBox(ControleAluno.gerarJCheckBox());
         ControleAluno Caluno = new ControleAluno();
         Caluno.chamaDeserializar();

@@ -22,7 +22,6 @@ public class ControleAluno {
     private SerializaAluno serializaAluno;
     private Aluno aluno;
     private ControleAluno cadastro;
-    private InAlteraAluno inAltera;
     private InAluno inAluno;
 
     public ControleAluno() {
@@ -41,15 +40,15 @@ public class ControleAluno {
     }
 
     public void CadastraAluno(String nome, String matricula, String curso, String semestre, ArrayList<Disciplina> arrayDisciplinasCursadas) {
-        Aluno alunoCadastrar = new Aluno(nome,matricula,curso,semestre);
+        Aluno alunoCadastrar = new Aluno(nome, matricula, curso, semestre);
         alunos.add(alunoCadastrar);
         this.chamaSerializar();
         DAO.Disciplinas.DaoSerializaDisciplinas.serializaDisciplinas(arrayDisciplinasCursadas);
 
     }
 
-    public void AlterarAluno(String nome, String matricula, String curso, String semestre,ArrayList<Disciplina> novo_arrayDisciplinasCursadas ) throws IllegalArgumentException {
-        Aluno alunoAlterar = new Aluno(nome,matricula,curso,semestre);
+    public void AlterarAluno(String nome, String matricula, String curso, String semestre, ArrayList<Disciplina> novo_arrayDisciplinasCursadas) throws IllegalArgumentException {
+        Aluno alunoAlterar = new Aluno(nome, matricula, curso, semestre);
         alteraAluno.add(alunoAlterar);
         DAO.Disciplinas.DaoSerializaDisciplinas.serializaDisciplinas(novo_arrayDisciplinasCursadas);
     }
@@ -67,7 +66,7 @@ public class ControleAluno {
 
         Aluno novoAluno = (Aluno) DeserializaAluno.listaAluno.get(0);
         ArrayList<Disciplina> listDisciplinasCursadas = DAO.Disciplinas.DeserializaDisciplinasCursadas.deserializaDisciplinasCursadasXml();
-        System.out.println("A quantidade de materias: "+listDisciplinasCursadas.size());
+        System.out.println("A quantidade de materias: " + listDisciplinasCursadas.size());
         String nome = novoAluno.getNome();
         String matricula = novoAluno.getMatricula();
         String curso1 = novoAluno.getCurso();
@@ -121,21 +120,23 @@ public class ControleAluno {
     public static ArrayList<JCheckBox> gerarJCheckBox() {
         ArrayList<Disciplina> listTodasDisciplinas = DAO.Disciplinas.DaoDeserializaDisciplinas.deserializaDisciplinasXml();
         ArrayList<JCheckBox> listComboBox = new ArrayList<JCheckBox>();
-        int i = 10;
+        int i = 10;//variavel para controlar a posicao vertical dos JCheckBox
         for (Iterator<Disciplina> iterator = listTodasDisciplinas.iterator(); iterator.hasNext();) {
-            JCheckBox jb = new JCheckBox();
+            JCheckBox obJCheckBox = new JCheckBox();
             Disciplina obDisciplina = iterator.next();
-            jb.setBackground(new java.awt.Color(94, 36, 211));
-            jb.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
-            jb.setForeground(new java.awt.Color(251, 249, 249));
-            jb.setBounds(10, i, 360, 23);
-            jb.setText(obDisciplina.getNome());
+            ControleAluno.formatJCkeckBox(obJCheckBox,i);
+            obJCheckBox.setText(obDisciplina.getNome());
             i += 20;
-
-            listComboBox.add(jb);
-            //this.jScrollPane1.add(this.jPanel1);
+            listComboBox.add(obJCheckBox);
         }
         return listComboBox;
 
+    }
+    
+    public static void formatJCkeckBox(JCheckBox obJCheckBox, int posicao){
+        obJCheckBox.setBackground(new java.awt.Color(94, 36, 211));
+        obJCheckBox.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+        obJCheckBox.setForeground(new java.awt.Color(251, 249, 249));
+        obJCheckBox.setBounds(10, posicao, 360, 23);
     }
 }
